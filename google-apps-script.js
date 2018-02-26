@@ -13,8 +13,8 @@ function formatMailBody(obj, order) {
   // loop over all keys in the ordered form data
   for (var idx in order) {
     var key = order[idx];
-    result += "<h4 style='text-transform: capitalize; margin-bottom: 0'>" + key + "</h4><div>" + obj[key] + "</div>";
-    // for every key, concatenate an `<h4 />`/`<div />` pairing of the key name and its value, 
+    result += "<h4 style='text-transform: capitalize; margin-bottom: 0'>" + key + "</h4><div>" + obj[key] + " RGV</div>";
+    // for every key, concatenate an `<h4 />`/`<div />` pairing of the key name and its value,
     // and append it to the `result` string created at the start.
   }
   return result; // once the looping is done, `result` will be one long string to put in the email body
@@ -25,18 +25,18 @@ function doPost(e) {
   try {
     Logger.log(e); // the Google Script version of console.log see: Class Logger
     record_data(e);
-    
+
     // shorter name for form data
     var mailData = e.parameters;
-    
+
     // names and order of form elements
     var dataOrder = JSON.parse(e.parameters.formDataNameOrder);
-    
+
     // determine recepient of the email
     // if you have your email uncommented above, it uses that `TO_ADDRESS`
     // otherwise, it defaults to the email provided by the form's data attribute
     var sendEmailTo = (typeof TO_ADDRESS !== "undefined") ? TO_ADDRESS : mailData.formGoogleSendEmail;
-    
+
     MailApp.sendEmail({
       to: String(sendEmailTo),
       subject: "Contact form submitted",
