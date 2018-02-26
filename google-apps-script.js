@@ -13,7 +13,7 @@ function formatMailBody(obj, order) {
   // loop over all keys in the ordered form data
   for (var idx in order) {
     var key = order[idx];
-    result += "<h4 style='text-transform: capitalize; margin-bottom: 0'>" + key + "</h4><div>" + obj[key] + " RGV</div>";
+    result += "<h4 style='text-transform: capitalize; margin-bottom: 0'>" + key + "</h4><div>" + obj[key] + "</div>";
     // for every key, concatenate an `<h4 />`/`<div />` pairing of the key name and its value,
     // and append it to the `result` string created at the start.
   }
@@ -39,7 +39,7 @@ function doPost(e) {
 
     MailApp.sendEmail({
       to: String(sendEmailTo),
-      subject: "Contact form submitted",
+      subject: "Contact form submitted for RGV",
       // replyTo: String(mailData.email), // This is optional and reliant on your form actually collecting a field named `email`
       htmlBody: formatMailBody(mailData, dataOrder)
     });
