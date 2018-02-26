@@ -1,0 +1,149 @@
+@font-face {
+  font-family: titleFont;
+  src: url(./fonts/continuo.ttf);
+}
+
+html, body {
+  background-color: #fedddc;
+  background: url(./img/vinyl.png) no-repeat center center fixed;
+  margin: 2em;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*body {
+  margin: 2em;
+  background: none;
+}*/
+
+aside {
+  border-radius: 3px;
+  color: black;
+  margin-bottom: 2em;
+  padding: 0.3em 1em;
+}
+
+button {
+  float: right;
+}
+
+h1 {
+  color: black;
+  font-family: titleFont;
+  font-size: 5em;
+}
+
+label, input, textarea {
+  font-family: titleFont;
+}
+
+p {
+  font-family: titleFont;
+  font-size: 1.5em;
+}
+
+textarea {
+  width: 100%;
+}
+
+.content-head {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 2em 0 1em;
+}
+
+.font-reduced {
+  font-family: titleFont;
+  font-size: 1em;
+}
+
+.is-center {
+  text-align: center;
+}
+
+.button-success {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(28, 184, 65);
+  /* this is a green */
+}
+
+.button-xlarge {
+  font-size: 125%;
+}
+
+#name, #email, #message {
+  width: 50%;
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  #name, #email, #message {
+    width: 100%;
+  }
+  h1 {
+    color: black;
+    font-family: titleFont;
+    font-size: 4em;
+  }
+  p {
+    font-family: titleFont;
+    font-size: 1.25em;
+  }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  #name, #email, #message {
+    width: 100%;
+  }
+  h1 {
+    color: black;
+    font-family: titleFont;
+    font-size: 4em;
+  }
+  p {
+    font-family: titleFont;
+    font-size: 1.25em;
+  }
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  #name, #email, #message {
+    width: 85%;
+  }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  #name, #email, #message {
+    width: 75%;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  #name, #email, #message {
+    width: 85%;
+  }
+}
