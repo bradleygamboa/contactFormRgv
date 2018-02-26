@@ -39,7 +39,7 @@ function doPost(e) {
 
     MailApp.sendEmail({
       to: String(sendEmailTo),
-      subject: "Contact form submitted for RGV",
+      subject: "RGV Contact Form",
       // replyTo: String(mailData.email), // This is optional and reliant on your form actually collecting a field named `email`
       htmlBody: formatMailBody(mailData, dataOrder)
     });
